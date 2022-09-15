@@ -1,0 +1,12 @@
+appId: com.example.appnate
+productName: Product name
+copyright: Copyright © 2022 Sergi Mayol
+directories:
+  output: dist
+  buildResources: resources
+files:
+  - from: .
+    filter:
+      - package.json
+      - app
+publish: null
