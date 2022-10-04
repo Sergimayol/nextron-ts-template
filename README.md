@@ -13,10 +13,12 @@ For more information, see the official [Nextron documentation](https://github.co
 This template is a boilerplate for building desktop applications with Nextron. It includes the following features:
 
 - [TypeScript](https://github.com/microsoft/TypeScript) support.
-- [Tailwind CSS]() for styling.
+- [Tailwind CSS](https://tailwindcss.com/) for styling.
 - [File Structure](#file-structure) already set up.
 - [Electron Builder](https://www.electron.build/configuration/configuration) for building your app for distribution.
 - [Next.js](https://nextjs.org/) for server-side rendering and code splitting.
+
+> **Note**: Also the render (nextjs) file structure is configured for my personal preference.
 
 ### File Structure
 
