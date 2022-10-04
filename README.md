@@ -61,6 +61,8 @@ npm run build
 yarn build
 ```
 
+> **Note**: For the build you can select the platform you want, all the options are in the [package.json](package.json) file.
+
 ## License
 
-[MIT](./LICENSE)
+This project is licensed under the terms of the [MIT license](./LICENSE).
