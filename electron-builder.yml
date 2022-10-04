@@ -1,5 +1,5 @@
 appId: com.example.appnate
-productName: Product name
+productName: nextron-ts-template
 copyright: Copyright © 2022 Sergi Mayol
 directories:
   output: dist

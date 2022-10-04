@@ -1,7 +1,7 @@
 {
   "private": true,
-  "name": "my-nextron-app",
-  "description": "My application description",
+  "name": "nextron-typescript-template",
+  "description": "Nextron (electron + nextjs) typescript template",
   "version": "1.0.0",
   "author": "Sergi Mayol",
   "main": "app/background.js",
