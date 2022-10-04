@@ -2,11 +2,14 @@ import {
   screen,
   BrowserWindow,
   BrowserWindowConstructorOptions,
-} from 'electron';
-import Store from 'electron-store';
+} from "electron";
+import Store from "electron-store";
 
-export default (windowName: string, options: BrowserWindowConstructorOptions): BrowserWindow => {
-  const key = 'window-state';
+export default (
+  windowName: string,
+  options: BrowserWindowConstructorOptions
+): BrowserWindow => {
+  const key = "window-state";
   const name = `window-state-${windowName}`;
   const store = new Store({ name });
   const defaultSize = {
@@ -14,7 +17,7 @@ export default (windowName: string, options: BrowserWindowConstructorOptions): B
     height: options.height,
   };
   let state = {};
-  let win;
+  let win: BrowserWindow;
 
   const restore = () => store.get(key, defaultSize);
 
@@ -29,7 +32,10 @@ export default (windowName: string, options: BrowserWindowConstructorOptions): B
     };
   };
 
-  const windowWithinBounds = (windowState, bounds) => {
+  const windowWithinBounds = (
+    windowState: { x: number; y: number; width: any; height: any },
+    bounds: { x: number; y: number; width: any; height: any }
+  ) => {
     return (
       windowState.x >= bounds.x &&
       windowState.y >= bounds.y &&
@@ -46,8 +52,8 @@ export default (windowName: string, options: BrowserWindowConstructorOptions): B
     });
   };
 
-  const ensureVisibleOnSomeDisplay = windowState => {
-    const visible = screen.getAllDisplays().some(display => {
+  const ensureVisibleOnSomeDisplay = (windowState: any) => {
+    const visible = screen.getAllDisplays().some((display: { bounds: any }) => {
       return windowWithinBounds(windowState, display.bounds);
     });
     if (!visible) {
@@ -75,10 +81,14 @@ export default (windowName: string, options: BrowserWindowConstructorOptions): B
       contextIsolation: false,
       ...options.webPreferences,
     },
+    frame: true,
+    autoHideMenuBar: true,
   };
+
   win = new BrowserWindow(browserOptions);
 
-  win.on('close', saveState);
+  win.on("close", saveState);
+  win.setAlwaysOnTop(false, "normal");
 
   return win;
 };
