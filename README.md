@@ -18,15 +18,15 @@ This template is a boilerplate for building desktop applications with Nextron. I
 - [Electron Builder](https://www.electron.build/configuration/configuration) for building your app for distribution.
 - [Next.js](https://nextjs.org/) for server-side rendering and code splitting.
 
-> **Note**: Also the renderer/ (nextjs) file structure is configured for my personal preference.
+> **Note**: The renderer (nextjs) file structure is configured for my personal preference. The initial structure is the same as the one created by nextron tailwindcss example.
 
 ### File Structure
 
 ```bash
 .
-├── main/ # Main process code
-├── renderer/ # Renderer process code (Next.js)
-└── resources/ # Resources for your app
+├── main/       # Main process code
+├── renderer/   # Renderer process code (Next.js)
+└── resources/  # Resources for your app
 ```
 
 ## Development
@@ -64,44 +64,3 @@ yarn build
 ## License
 
 [MIT](./LICENSE)
-
-# Nextron
-
-<p align="center"><img src="https://i.imgur.com/a9QWW0v.png"></p>
-
-## Usage
-
-### Create an App
-
-```
-# with npx
-$ npx create-nextron-app my-app --example with-typescript-tailwindcss
-
-# with yarn
-$ yarn create nextron-app my-app --example with-typescript-tailwindcss
-
-# with pnpx
-$ pnpx create-nextron-app my-app --example with-typescript-tailwindcss
-```
-
-### Install Dependencies
-
-```
-$ cd my-app
-
-# using yarn or npm
-$ yarn (or `npm install`)
-
-# using pnpm
-$ pnpm install --shamefully-hoist
-```
-
-### Use it
-
-```
-# development mode
-$ yarn dev (or `npm run dev` or `pnpm run dev`)
-
-# production build
-$ yarn build (or `npm run build` or `pnpm run build`)
-```
