@@ -18,7 +18,7 @@ This template is a boilerplate for building desktop applications with Nextron. I
 - [Electron Builder](https://www.electron.build/configuration/configuration) for building your app for distribution.
 - [Next.js](https://nextjs.org/) for server-side rendering and code splitting.
 
-> **Note**: Also the render (nextjs) file structure is configured for my personal preference.
+> **Note**: Also the renderer/ (nextjs) file structure is configured for my personal preference.
 
 ### File Structure
 
