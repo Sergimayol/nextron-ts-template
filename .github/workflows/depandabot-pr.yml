@@ -20,7 +20,7 @@ jobs:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
       # Create a new step to install the dependencies and run the build
       - name: Install dependencies and run build
-        run: npm install && npm run build
+        run: npm install && npm run build:linux
 
       # If the build is succesfull, the PR will be auto-merged
       - name: Auto-merge PR
