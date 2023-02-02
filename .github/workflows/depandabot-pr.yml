@@ -15,7 +15,7 @@ jobs:
       # will not occur.
       - name: Dependabot metadata
         id: dependabot-metadata
-        uses: dependabot/fetch-metadata
+        uses: dependabot/fetch-metadata@v1.1.1
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
       # Install node and npm
@@ -25,7 +25,7 @@ jobs:
           node-version: '16'
       # Create a new step to install the dependencies and run the build
       - name: Install dependencies and run build
-        run: npm install && npm run build
+        run: npm install && npm run build:linux
 
       # If the build is succesfull, the PR will be auto-merged
       - name: Auto-merge PR

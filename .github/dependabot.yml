@@ -3,5 +3,14 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "daily"
+      time: "13:30"
+      timezone: "Europe/Madrid"
     open-pull-requests-limit: 5
+# Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "13:30"
+      timezone: "Europe/Madrid"
