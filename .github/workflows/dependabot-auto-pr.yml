@@ -1,4 +1,3 @@
-# Create a github workflow to auto-merge pull request from dependabot that runs an npm run build and if it succes auto-merge it
 name: Dependabot Pull Request Auto-Merge
 on: pull_request_target
 permissions:
@@ -11,23 +10,19 @@ jobs:
     # PRs but also ensures that it only does work for Dependabot PRs.
     if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
-      # This first step will fail if there's no metadata and so the approval
-      # will not occur.
-      - name: Dependabot metadata
-        id: dependabot-metadata
-        uses: dependabot/fetch-metadata@v1.1.1
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
       # Install node and npm
       - name: Install Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '16'
+          cache: 'npm'
+
       # Create a new step to install the dependencies and run the build
-      - name: Install dependencies
-        run: npm install
-      - name: Run build
-        run: npm run build:linux
+      - name: Install dependencies and build
+        run: pwd && ls -la
+      - run: npm install
+      - run: npm ci
+      - run: npm run build:linux
 
       # If the build is succesfull, the PR will be auto-merged
       - name: Auto-merge PR
