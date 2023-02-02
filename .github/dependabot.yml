@@ -4,7 +4,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      time: "13.30"
+      time: "13:30"
       timezone: "Europe/Madrid"
     open-pull-requests-limit: 5
 # Maintain dependencies for GitHub Actions
@@ -12,5 +12,5 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      time: "13.30"
+      time: "13:30"
       timezone: "Europe/Madrid"
