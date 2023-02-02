@@ -24,10 +24,10 @@ jobs:
         with:
           node-version: '16'
       # Create a new step to install the dependencies and run the build
-      - name: Install dependencies and run build
-        run: |
-            cd nextron-ts-template/nextron-ts-template
-            npm install && npm run build:linux
+      - name: Install dependencies
+        run: npm install
+      - name: Run build
+        run: npm run build:linux
 
       # If the build is succesfull, the PR will be auto-merged
       - name: Auto-merge PR
