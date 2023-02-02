@@ -18,6 +18,11 @@ jobs:
         uses: dependabot/fetch-metadata
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
+      # Install node and npm
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
       # Create a new step to install the dependencies and run the build
       - name: Install dependencies and run build
         run: npm install && npm run build
