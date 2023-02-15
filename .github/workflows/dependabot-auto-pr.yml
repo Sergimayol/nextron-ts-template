@@ -10,6 +10,9 @@ jobs:
     # PRs but also ensures that it only does work for Dependabot PRs.
     if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
       # Install node and npm
       - name: Install Node.js
         uses: actions/setup-node@v2
