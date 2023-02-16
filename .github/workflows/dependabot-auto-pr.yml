@@ -22,7 +22,6 @@ jobs:
 
       # Create a new step to install the dependencies and run the build
       - name: Install dependencies and build
-        run: pwd && ls -la
       - run: npm install
       - run: npm ci
       - run: npm run build:linux
