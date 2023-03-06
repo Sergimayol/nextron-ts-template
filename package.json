@@ -23,7 +23,7 @@
     "@types/node": "18.14.2",
     "@types/react": "18.0.21",
     "autoprefixer": "10.4.12",
-    "electron": "23.1.1",
+    "electron": "23.1.2",
     "electron-builder": "23.3.3",
     "next": "13.2.1",
     "nextron": "8.2.0",
