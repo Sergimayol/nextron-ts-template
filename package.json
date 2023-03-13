@@ -22,7 +22,7 @@
   "devDependencies": {
     "@types/node": "18.14.6",
     "@types/react": "18.0.21",
-    "autoprefixer": "10.4.12",
+    "autoprefixer": "10.4.14",
     "electron": "23.1.2",
     "electron-builder": "23.3.3",
     "next": "13.2.4",
