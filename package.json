@@ -25,7 +25,7 @@
     "autoprefixer": "10.4.14",
     "electron": "25.1.1",
     "electron-builder": "23.3.3",
-    "next": "13.4.5",
+    "next": "13.4.6",
     "nextron": "8.2.0",
     "postcss": "8.4.24",
     "react": "18.2.0",
