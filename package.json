@@ -20,7 +20,7 @@
     "electron-store": "8.1.0"
   },
   "devDependencies": {
-    "@types/node": "20.5.0",
+    "@types/node": "20.5.1",
     "@types/react": "18.2.20",
     "autoprefixer": "10.4.15",
     "electron": "25.5.0",
