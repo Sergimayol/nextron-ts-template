@@ -26,7 +26,7 @@
     "electron": "26.1.0",
     "electron-builder": "24.6.4",
     "next": "13.4.19",
-    "nextron": "8.5.0",
+    "nextron": "8.6.0",
     "postcss": "8.4.29",
     "react": "18.2.0",
     "react-dom": "18.2.0",
